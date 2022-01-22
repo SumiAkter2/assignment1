@@ -1,0 +1,33 @@
+nav> ul{
+    display: flex;
+}
+
+
+nav ul li{
+
+     list-style: none;
+    margin-right: 2em;
+}
+nav ul li a{
+    text-decoration: none;
+   
+}
+.dropdown{
+  position: absolute;
+    background-color: aqua;
+    display: none;
+}
+
+nav>ul>li:hover>.dropdown {
+    display:block;
+    }
+    nav>ul>li:hover>.dropdown.megamenu{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-column-gap: 2em;
+    }
+    .megamenu h3{
+        font-size: 18px;
+        color: chocolate;
+        margin-bottom: 0;
+    }

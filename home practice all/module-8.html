@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html layout</title>
+    <script src="https://kit.fontawesome.com/f313ac90f2.js" crossorigin="anonymous"></script>
+    <style>
+        .container {
+            display: flex;
+
+            height: 200px;
+            border: 2px dotted green;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            border: 3px dashed red;
+            width: 400px;
+            height: 200px;
+            font-size: 3em;
+
+        }
+
+        #box-1 {
+            flex-grow: 1;
+
+        }
+
+        .login-container {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .login-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .login-form input,
+        button {
+            font-size: 1.3em;
+            margin-top: 10px;
+            border: 1px solid rgb(12, 235, 12);
+            padding-left: 30px;
+            border-radius: 5px;
+        }
+
+        .login-form button {
+            background-color: lime;
+            color: whitesmoke;
+            font-weight: 700;
+            padding: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            margin-right: 20px;
+            font-size: 1.5em;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .calender,
+        .day {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            grid-template-rows: repeat(6, 1fr);
+            grid-gap: 10px;
+        }
+
+        .date,
+        .day {
+            font-size: 1.5em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            background-color: lightsteelblue;
+            height: 50px;
+        }
+
+        .day {
+            background-color: rgb(179, 91, 4);
+            margin-top: 10px;
+
+
+        }
+
+        .new-month {
+            background-color: rgb(243, 183, 122);
+        }
+
+        header {
+            height: 100px;
+            width: auto;
+            text-align: center;
+            background-color: rgb(179, 91, 4);
+            border: 1px solid rgb(253, 118, 8);
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 10px;
+        }
+
+        .no {
+            background-color: yellowgreen;
+            text-align: center   ;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <span><a href="">Home</a>
+                <a href="">Prpject</a>
+                <a href="">With us</a>
+                <a href="">About</a></span>
+            <span> <a href=""><i class="fas fa-id-badge"></i></a>
+                <a href=""><i class="fas fa-sign-out-alt"></i></a>
+            </span>
+
+        </nav>
+    </header>
+    <!-- flexuse -->
+    <section class="login-container">
+        <form action="" class="login-form">
+            <h1>Login</h1>
+            <input type="email" name="email" id="" placeholder="Enter your email" required>
+            <input type="password" name="password" id="" placeholder="Enter password" required>
+            <button type="submit">Login</button>
+        </form>
+    </section>
+    <h1>Flex-box</h1>
+    <div class="container">
+        <div id="box-1" class="box">box-1</div>
+
+        <div id="box-3" class="box">box-3</div>
+
+    </div>
+    <br><br>
+
+    <br> <br>
+    <header>
+        <h1>December <br>2021
+        </h1>
+    </header>
+    <div class="calender">
+
+        </header>
+        <div class="day">Sun</div>
+        <div class="day">Mon</div>
+        <div class="day">Tue</div>
+        <div class="day">Wed</div>
+        <div class="day">Thu</div>
+        <div class="day">Fri</div>
+        <div class="day">Sat</div>
+        <div class="date new-month">31</div>
+        <div class="date">1</div>
+        <div class="date">2</div>
+        <div class="date">3</div>
+        <div class="date">4</div>
+        <div class="date">5</div>
+        <div class="date">6</div>
+        <div class="date">7</div>
+        <div class="date">8</div>
+        <div class="date">9</div>
+        <div class="date">10</div>
+        <div class="date">11</div>
+        <div class="date">12</div>
+        <div class="date">13</div>
+        <div class="date">14</div>
+        <div class="date">15</div>
+        <div class="date">16</div>
+        <div class="date">17</div>
+        <div class="date">18</div>
+        <div class="date">19</div>
+        <div class="date">20</div>
+        <div class="date">21</div>
+        <div class="date">22</div>
+        <div class="date">23</div>
+        <div class="date">24</div>
+        <div class="date">25</div>
+        <div class="date">26</div>
+        <div class="date">27</div>
+        <div class="date">28</div>
+        <div class="date">29</div>
+        <div class="date">30</div>
+
+        <div class="date new-month">1</div>
+        <div class="date new-month">2</div>
+        <div class="date new-month">3</div>
+        <div class="date new-month">4</div>
+
+    </div>
+
+    <h2>Now creat a grid css</h2>
+    <div class="grid-container">
+        <div class="no">1</div>
+        <div class="no">2</div>
+        <div class="no">3</div>
+        <div class="no">4</div>
+        <div class="no">5</div>
+        <div class="no">6</div>
+        <div class="no">7</div>
+        <div class="no">8</div>
+        <div class="no">9</div>
+        <div class="no">10</div>
+        <div class="no">11</div>
+        <div class="no">12</div>
+    </div>
+</body>
+
+</html>
